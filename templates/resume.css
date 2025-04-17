@@ -1,0 +1,8 @@
+img{ border-radius:50%;width: 1in;height: 1in;margin: 5pt;border: 2pt dotted black;}
+*{border: 0pt solid black;font-family: sans-serif;}
+h2{ position: absolute;top: 4%; left: 10%; }
+.fst{ background-color: rgb(169, 167, 167);height: 30%;
+    width: 99%;position: absolute;top:0%;padding-left: 5pt;left: 0%;}
+    .snd{ position:absolute;top: 30%; width: 99%;}
+hr{border: 1pt dashed grey;width: 99%;left: 0%;position: relative}
+body{ background-color: rgb(255, 222, 210); }    

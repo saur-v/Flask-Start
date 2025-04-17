@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/Stylesheet.css">
+    <style>
+        body { background-color: rgb(255, 181, 245); }
+        form{ position: absolute;top: 20%; }
+        form td{ margin-left: 5in; }
+        .button1 {
+            border-width: 0; color: rgb(255, 255, 255);
+             font-weight: bolder; font-size: medium;
+            background-color: rgb(96, 96, 96);}
+        .added{ position: absolute;top: 20%;}
+        .added2{ position: absolute;top: 30%;}
+        .found{ position: absolute;top:30%}
+        p a{ font-family: Arial, Helvetica, sans-serif; }
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Your Data 📑</h1>
+        <br>
+        <table >
+            <tr>
+                <td><a class="navbar_link" href="{{url_for('home')}}">Home</a></td>
+                <td><a class="navbar_link" href="{{url_for('contact_me')}}">Contact</a></td>
+                <td><a class="navbar_link" href="{{url_for('about_you')}}">About You</a></td>
+                <td><a class="navbar_link" href="{{url_for('user_data')}}">Your Info</a></td>
+            </tr>
+        </table> 
+    </div>
+    {% if a==0: %}
+        <form action="{{ url_for('user_data') }}" method="post" style="border: 0pt black solid;">
+            <table>
+                <tr>
+                    <td><p>enter name to get your data</p></td>
+                    <td class="input"><input type="text" class="text_input" name="name"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Submit" class="button1">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    {% else: %}
+        {% if user_success: %}
+        <table class="found">
+            <tr>
+                <td>
+                    <p>Your name is - {{ user_name }}</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Your email is - {{ user_email}}</p> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Your contact is - {{ user_contact }}</p>
+                </td>
+            </tr>
+        </table>
+        {% else: %}
+            <p class="added">user not found!</p>
+            <p class="added2">please add your data and then try again <a href="{{ url_for('about_you') }}">add data</a></p>
+        {% endif %}
+    {% endif %}
+</body>
+</html>

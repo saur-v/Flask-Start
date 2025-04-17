@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/Stylesheet.css">
+    <style>
+        body { background-color:rgb(160, 160, 239); }
+        form{ position: absolute;top: 20%; }
+        form td{ margin-left: 1in; }
+        .button1 {
+            border-width: 0; color: rgb(0, 0, 0); font-weight: bolder; font-size: medium;}
+        .added{ position: absolute;top: 20%; }
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Something About You 🫵🏻</h1>
+        <br>
+        <table>
+            <tr>
+                <td><a class="navbar_link" id="url_home" href="{{url_for('home')}}">Home</a></td>
+                <td><a class="navbar_link" href="{{url_for('contact_me')}}">Contact</a></td>
+                <td><a class="navbar_link" href="{{url_for('about_you')}}">About You</a></td>
+                <td><a class="navbar_link" href="{{url_for('user_data')}}">Your Info</a></td>
+            </tr>
+        </table>
+    </div> 
+    {% if a==0: %}
+        <form action="{{ url_for('about_you') }}" method="post">
+            <table>
+                <tr>
+                    <td><p>your name</p></td>
+                    <td><input type="text" class="text_input" name="name"></td>
+                </tr>
+                <tr>
+                    <td><p>your contact number</p></td>
+                    <td><input type="text" class="text_input" name="contact"></td>
+                </tr>
+                <tr>
+                    <td><p>your email adress</p></td>
+                    <td><input type="email" class="text_input" name="email"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Submit" class="button1">
+                    </td>
+                </tr>
+            </table>
+        </form>    
+
+    {% else: %}
+        <p class="added">Your data has been added</p>
+    {% endif %}
+      
+       
+    </form> 
+</body>
+</html>

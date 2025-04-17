@@ -1,0 +1,130 @@
+/* styles.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.logout{
+    width: 80px;
+    height: 32px;
+    background-color: rgb(106, 199, 106);
+    border-radius: 8px;
+    border-width: 0px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content:space-around;
+    padding: 1rem;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header li {
+    margin-right: 1rem;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.post-form {
+    background-color: #f2f2f2;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.post-form h2 {
+    margin-bottom: 1rem;
+}
+
+.post-form textarea {
+    width: 100%;
+    height: 10rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+}
+
+.post-form input[type="file"] {
+    margin-top: 1rem;
+}
+
+.post-form button {
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.post-form button:hover {
+    background-color: #444;
+}
+
+.post-feed {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+.post {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    margin: 1rem;
+    padding: 1rem;
+    width: 30%;
+}
+
+.post img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.post h3 {
+    margin-bottom: 0.5rem;
+}
+
+.post p {
+    margin-bottom: 1rem;
+}
+
+.post button {
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.post button:hover {
+    background-color: #444;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}

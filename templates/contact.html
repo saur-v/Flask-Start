@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/Stylesheet.css">
+    <style>
+        body { background-color: rgb(250, 171, 142); }
+        #call_logo { width: 1in; height: 1in; 
+            transition-duration: 0.4s; 
+            position: relative;left: 0%;}
+        .imgs{ position: absolute; top: 20%; left: 0%;}    
+        
+   
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Contact Me 📞</h1>
+        <br>
+        <table>
+            <tr>
+                <td><a class="navbar_link" id = 'link1' href="{{url_for('home')}}">Home</a></td>
+                <td><a class="navbar_link" href="{{url_for('contact_me')}}">Contact</a></td>
+                <td><a class="navbar_link" href="{{url_for('about_you')}}">About You</a></td>
+                <td><a class="navbar_link" href="{{url_for('user_data')}}">Your Info</a></td>
+            </tr>
+        </table>
+    </div>     
+   <table class="imgs" style="border: 0pt black solid;" >
+    <tr >
+        <td>
+            <img src="../static/call.gif" id="call_logo" class="hover" onclick="heyna()">
+        </td>
+        <td>
+            <p id="contact">+917851946847</p>
+        </td>
+    </tr>
+    <tr >
+        <td>
+            <img src="../static/email.gif" id="call_logo" class="hover">
+        </td>
+        <td>
+            <p>Sauravchaudhary8510@gmail.com</p>
+        </td>
+    </tr>
+    <tr >
+        <td>
+            <img src="../static/snapchat.gif" id="call_logo" class="hover">
+        </td>
+        <td>
+            <p>sarfy_chaudhary</p>
+        </td>
+    </tr>
+   </table>  
+        
+<script src="../static\Javafunction.js"></script>    
+</body>
+</html>
